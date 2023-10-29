@@ -1,0 +1,32 @@
+A server is an actual computer or a virtual devie that provides
+functionality for other programs or devices called clients.
+
+The role of the domain name is that it allows the users to
+access websites, without kowing the IP address associated
+with the websites.
+
+The type of DNS record www in www.foobar.com is A record.
+
+The role of the web server is that it accepts requests made by
+the web browser through HTTP, then process the request by displaying
+it with HTML content.
+
+The role of the application server is that it provides access to
+business logic for use by the client apllication programs.
+
+The role of the database is to create, update, manage and retrieve
+records.
+
+The server using to communicate with the computer of the user requesting
+the website is HTTP
+
+The infrastructure above has no redundancy( that is repetition of information
+or functionality) that can be help to avoid SPOF,hence any single failure
+in any part of the system will cause all the system to stop.
+
+Downtime can occur in the above infrastructure because we only have one server
+and one database,that is use to make deployment and maintenance hence no user
+will access the website at that time.
+
+The above infrastructure cannot scale if there too much incoming traffic because
+there is no second server in the system to share the loads and it will be over loaded.
