@@ -7,7 +7,7 @@ The role of the domain name is that it allows the users to
 access websites, without kowing the IP address associated
 with the websites.
 
-The type of DNS record www in www.foobar.com is A record.
+The type of DNS record www in www.foobar.com is CNAME record.
 
 The role of the web server is that it accepts requests made by
 the web browser through HTTP, then process the request by displaying
