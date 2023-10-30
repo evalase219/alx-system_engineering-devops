@@ -1,0 +1,47 @@
+The additional elements which include:
+3 firewalls: the first one checks the rules after receiving the requests.
+The second firewall is working in the server to prevent hackers depending
+on the request, then the third one acts as a circuit-level firewall,
+inspect the transaction of the information.
+
+SSL certificate: this is use to secure the HTTPS protocol and encrypt the
+transaction from the hackers.
+
+3 monitoring clients: the  first monitors the availability and performance
+of the web servers, the second monitor the health of the web applications
+while the third monitor the traffic flowing to and from the web servers.
+
+The firewalls are for network security devices that monitor incoming and
+outgoing network traffic and allow or block data packets based on a set
+of security rules.
+
+Traffic is served over HTTPS because HTTPS encrypts all traffic between
+the client and the server, making it much more difficult for attackers
+to intercept and eavesdrop on communications.
+
+Monitoring are use for tracking the performance of the system or process
+over time, identify trends and patterns, and detect any problems.
+
+Monitoring tools are collecting data through different method depending
+on the tools.Polling is the simplest and most common method of data collection.
+The monitoring tool sends requests to the system or process at regular intervals
+to collect data. The frequency of polling can be configured depending on the
+needs of the organization. For example, a system administrator might poll a server
+every minute to collect data on CPU usage and memory usage.
+
+Queries per second is a measure of the rate of traffic going in a particular server
+serving a web domain. It is an important metric to monitor, because it can help
+in deciding whether to scale the server in order to cope with demand of usage, and
+resource requirement so the web page won't collapse in the future with the overload
+server request.
+
+Terminating SSl at the load balancer can cause an issue  to our web infrastructure
+because it can grant easy access to the hackers and can also slow down the website.
+
+One MySQL server capable of accepting writes is an issue because If the single MySQL
+server fails, all applications that rely on the database will be unavailable until
+the server is repaired or replaced. This can lead to lost revenue and productivity.
+
+Having servers with all the same components (database, web server and application
+server) might be a problem because If one of the servers fails, all three components
+will be unavailable. This can lead to significant downtime for the application.

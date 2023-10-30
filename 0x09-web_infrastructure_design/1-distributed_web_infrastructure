@@ -1,0 +1,34 @@
+We just added another server and a load balancer(HAproxy).
+The reason for adding the above two is to control traffic.
+As the number of the users are increasing, one server cannot
+be able to handle the request, therefore we need more servers.
+The load balancer is used to distribute the work-load on the
+individual server which in turn increases the reliability,
+efficiency and availabilty of the servers.
+
+My load balancer distribution algorithms for my web infrastructure,
+is Round Robin Scheduling: In this algorithm requests are served by
+the server sequentially one after another.For example: Request 1 can
+be direct to server 1 and request 2 can be directed to server 2, etc.
+
+My load balancer is Active-Active setup.
+The difference between active-active setup and active-passive setup
+is that: in active-active setup, the load balancer spreads out the
+work-load's traffic among the multiple server while in active-passive
+setup the load balancer recognizes a failed server and redirect the
+load to the next server.
+
+Primary Replica(Master-slave) enables data from one database server
+(the master) to be replicated to one or more other database servers
+(the slaves). The master logs the updates, which the ripple through
+to the slaves. If the changes are made to the master and slave at
+the same time, it is synchronous.
+
+The difference between the primary node and the Replica node in the
+regard to the apllication is that, the primary node is the
+authouritative source while the Replica(slave) databases are
+sychronized to the primary(master).
+
+This infrastructure needs Firewalls, HTTPS and monitoring in order to
+avoid the risk of SPOF(wchich is the component of a system that when
+it fails, the entire system will fail)
