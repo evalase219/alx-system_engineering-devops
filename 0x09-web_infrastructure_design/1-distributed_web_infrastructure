@@ -1,3 +1,5 @@
+https://imgur.com/4Y8AEg6
+
 We just added another server and a load balancer(HAproxy).
 The reason for adding the above two is to control traffic.
 As the number of the users are increasing, one server cannot
