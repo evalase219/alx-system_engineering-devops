@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#Install and configure HAproxy on ubuntu machine
+
+#update and install
+sudo apt-get update
+sudo apt-get -y install haproxy
+
+#Save a copy of the current configuartion state
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+
+#configure haproxy to manage two servers
+front_end="#configure frontend
+frontend web_frontend
+         bind *:80
+         default_backend web_backend
+
+#configure backend
+backend web_backend
+        balance roundrobin
+        mode http
+        server 401058-web-01 35.168.7.0:80 check
+        server 401058-web-02 100.25.203.146:80 check"
+
+echo " " | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "$front_end" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+#verify configuration syntax
+sudo haproxy -f /etc/haproxy/haproxy.cfg -c
+
+#start haproxy
+sudo service haproxy start
+
+#Enable automatic startup
+sudo systemctl enable haproxy
+
+#reload haproxy
+sudo systemctl reload haproxy
